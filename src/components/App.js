@@ -8,8 +8,9 @@ import './App.css';
 const KEY = 'AIzaSyASdAXfv2bMZfjxsjh-GDRfAZ9Ev7Yjc_Q';
 
 class App extends React.Component {
-  state = { videos: [], selectedVideo: null };
+  state = { videos: [], selectedVideo: null, errorMessage: '' };
 
+  //default result
   componentDidMount() {
     this.onTermSubmit('buildings');
   }
@@ -28,8 +29,9 @@ class App extends React.Component {
 
     this.setState({
       videos: response.data.items,
-      selectedVideo: response.data.items[0]
+      selectedVideo: response.data.items[0],
     });
+    // if (this.state.videos.length == 0) this.setState({ errorMessage: 'No results found! Try again' });
   };
 
   onVideoSelect = (video) => {
@@ -38,14 +40,14 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="ui container">
-        <SearchBar onFormSubmit={this.onTermSubmit} />
+      <div className="ui container" style={{marginTop: '25px'}}>
+        <SearchBar  onFormSubmit={this.onTermSubmit} />
         <div className="ui grid">
           <div className="ui row">
             <div className="eleven wide column">
               <VideoDetail video={this.state.selectedVideo} />
             </div>
-            <div className="five wide column">
+            <div style={{backgroundColor: '#f7f7f7', width: '345px'}}>
               <VideoList
                 onVideoSelect={this.onVideoSelect}
                 videos={this.state.videos}
