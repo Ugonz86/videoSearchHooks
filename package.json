@@ -1,6 +1,6 @@
 {
   "name": "videos",
-  "homepage": "http://Ugonz86.github.io/videoSearch",
+  "homepage": "http://Ugonz86.github.io/videos",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,7 +8,6 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.1",
-    "dotenv": "^8.2.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.1",
