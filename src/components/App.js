@@ -5,11 +5,7 @@ import VideoList from './VideoList';
 import VideoDetail from './VideoDetail';
 import './App.css';
 
-const KEY = 'AIzaSyASdAXfv2bMZfjxsjh-GDRfAZ9Ev7Yjc_Q';
-
-// require('dotenv').config()
-
-// const KEY = `${process.env.YOUTUBE_API_KEY}`;
+const KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
 
 class App extends React.Component {
   state = { videos: [], selectedVideo: null, errorMessage: '' };
