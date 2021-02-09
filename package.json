@@ -1,6 +1,6 @@
 {
-  "name": "videos",
-  "homepage": "https://Ugonz86.github.io/videoSearch",
+  "name": "videos-hooks",
+  "homepage": "https://Ugonz86.github.io/videoSearch-hooks",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
